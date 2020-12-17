@@ -25,17 +25,59 @@ body {
     height: 100vh;
 }
 
-.instagram-phone {
+.gallery{
+    position: relative;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    margin: auto;
+    width: 45%;
+}
+.gallery{
+    height: 40rem;
 }
 
-.instagram-phone img {
-    height: 50rem;
-}
+.photo{
+    position:absolute;
+    opacity: 0;
+    animation-name: animationShow;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    width: 100%;
 
+}
+@keyframes animationShow{
+    10%{
+        opacity: 1;
+        transform: scale(1.5,1.5);
+    }
+    50%{
+        opacity: 0;
+    }
+}
+.photo:nth-child(1){
+    
+}
+.photo:nth-child(2){
+    animation-delay: 15s;
+    
+}
+.photo:nth-child(3){
+    animation-delay: 20s;
+}
+.photo:nth-child(4){
+    animation-delay: 25s;
+}
+.photo:nth-child(5){
+    animation-delay: 30s;
+}
+.photo:nth-child(6){
+    animation-delay: 35s;
+}
+.photo:nth-child(7){
+    animation-delay: 40s;
+}
 .instagram-continue {
     display: flex;
     align-items: center; /* horizontal */
@@ -145,7 +187,7 @@ body {
         width: 90%;
     }
 
-    .instagram-phone {
+    .gallery {
         display: none;
     }
 
